@@ -35,7 +35,7 @@
   <ItemGroup>
     <Reference Include="jabber-net, Version=2.0.0.553, Culture=neutral, PublicKeyToken=924c5b18328d6f09, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\jabber-net\bin5\Debug\jabber-net.dll</HintPath>
+      <HintPath>..\jabber-net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.XML" />
