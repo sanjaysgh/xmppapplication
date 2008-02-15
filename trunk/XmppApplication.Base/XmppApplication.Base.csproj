@@ -1,0 +1,175 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XmppApplication.Base</RootNamespace>
+    <AssemblyName>XmppApplication.Base</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="jabber-net, Version=2.0.0.553, Culture=neutral, PublicKeyToken=924c5b18328d6f09, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\jabber-net\bin5\Debug\jabber-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection\Connection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Connection\EncryptionMode.cs" />
+    <Compile Include="CustomPackets\Commands.cs" />
+    <Compile Include="Debug\Debug.cs" />
+    <Compile Include="Debug\PacketEventArgs.cs" />
+    <Compile Include="Disco\Disco.cs" />
+    <Compile Include="Disco\ItemNode.cs" />
+    <Compile Include="HelperClasses\CustomColorTable.cs" />
+    <Compile Include="HelperClasses\DefaultSounds.cs" />
+    <Compile Include="HelperClasses\ImageManipulation.cs" />
+    <Compile Include="HelperClasses\XmppImages.cs" />
+    <Compile Include="HelperClasses\XmppSounds.cs" />
+    <Compile Include="Messaging\MessageEventArgs.cs" />
+    <Compile Include="Messaging\Messaging.cs" />
+    <Compile Include="Presence\Availability.cs" />
+    <Compile Include="Presence\AwayMessageItem.cs" />
+    <Compile Include="Presence\EventingList.cs" />
+    <Compile Include="Presence\Presence.cs" />
+    <Compile Include="Presence\PresenceItemEventArgs.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Queries\Queries.cs" />
+    <Compile Include="QueryCache\CallBackState.cs" />
+    <Compile Include="QueryCache\DictionaryCache.cs" />
+    <Compile Include="QueryCache\QueryCache.cs" />
+    <Compile Include="QueryCache\QueryCallback.cs" />
+    <Compile Include="Roster\ActionImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Roster\ActionImageEventArgs.cs" />
+    <Compile Include="Roster\DefaultContextMenu.cs" />
+    <Compile Include="Roster\Roster.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Roster\RosterItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Roster\RosterItemEventArgs.cs" />
+    <Compile Include="Roster\RosterResource.cs" />
+    <Compile Include="Roster\VCardEventArgs.cs" />
+    <Compile Include="XmppGlobal.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XmppApplication.Interfaces\XmppApplication.Interfaces.csproj">
+      <Project>{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}</Project>
+      <Name>XmppApplication.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences-desktop-screensaver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contact-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet-group-chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accessories-text-editor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog-warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gear22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet-mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\internet-web-browser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\process-stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spinner.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appointment-new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\applications-system.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\document-properties.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
