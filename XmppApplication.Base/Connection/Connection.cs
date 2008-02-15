@@ -146,7 +146,8 @@ namespace XmppApplication.Base
 				XmppGlobal.InternalClient.AutoRoster = true;
 				XmppGlobal.InternalClient.AutoReconnect = 5;
 				XmppGlobal.InternalClient.PlaintextAuth = false;
-				//XmppGlobal.InternalClient.RequiresSASL = true;
+				XmppGlobal.InternalClient.AutoStartCompression = true;
+				XmppGlobal.InternalClient.AutoStartTLS = true;
 				XmppGlobal.InternalClient.Connect ();
 			} catch (Exception) {
 				throw;
