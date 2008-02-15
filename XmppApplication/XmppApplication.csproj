@@ -1,0 +1,214 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{037A139A-E595-4341-8AEC-F389CFB2B592}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XmppApplication</RootNamespace>
+    <AssemblyName>XmppApplication</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="jabber-net, Version=2.0.0.553, Culture=neutral, PublicKeyToken=924c5b18328d6f09, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\jabber-net\bin5\Debug\jabber-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dialogs\AddContactDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AddContactDialog.Designer.cs">
+      <DependentUpon>AddContactDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\AdvancedConnectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\AdvancedConnectionDialog.Designer.cs">
+      <DependentUpon>AdvancedConnectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EntityTimeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EntityTimeDialog.Designer.cs">
+      <DependentUpon>EntityTimeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\EntityVersionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\EntityVersionDialog.Designer.cs">
+      <DependentUpon>EntityVersionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewAccountDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewAccountDialog.Designer.cs">
+      <DependentUpon>NewAccountDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\NewAwayMessageDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\NewAwayMessageDialog.Designer.cs">
+      <DependentUpon>NewAwayMessageDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ExtensionConfigurationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ExtensionConfigurationDialog.Designer.cs">
+      <DependentUpon>ExtensionConfigurationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\RenameContactDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\RenameContactDialog.Designer.cs">
+      <DependentUpon>RenameContactDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\SubscriptionRequestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\SubscriptionRequestDialog.Designer.cs">
+      <DependentUpon>SubscriptionRequestDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\UserVCardDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\UserVCardDialog.Designer.cs">
+      <DependentUpon>UserVCardDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\ExtensionManager.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dialogs\AddContactDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\AdvancedConnectionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AdvancedConnectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EntityTimeDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EntityTimeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\EntityVersionDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EntityVersionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAccountDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewAccountDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\NewAwayMessageDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NewAwayMessageDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ExtensionConfigurationDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ExtensionConfigurationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\RenameContactDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RenameContactDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\SubscriptionRequestDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SubscriptionRequestDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\UserVCardDialog.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserVCardDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServiceBrowser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServiceBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ServiceBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServiceBrowser.Designer.cs">
+      <DependentUpon>ServiceBrowser.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XmppApplication.Base\XmppApplication.Base.csproj">
+      <Project>{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}</Project>
+      <Name>XmppApplication.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XmppApplication.GuiControls\XmppApplication.GuiControls.csproj">
+      <Project>{2D059CE9-2358-4C42-AC38-F5AFDF09485C}</Project>
+      <Name>XmppApplication.GuiControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XmppApplication.Interfaces\XmppApplication.Interfaces.csproj">
+      <Project>{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}</Project>
+      <Name>XmppApplication.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

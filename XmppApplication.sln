@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmppApplication", "XmppApplication\XmppApplication.csproj", "{037A139A-E595-4341-8AEC-F389CFB2B592}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmppApplication.GuiControls", "XmppApplication.GuiControls\XmppApplication.GuiControls.csproj", "{2D059CE9-2358-4C42-AC38-F5AFDF09485C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmppApplication.Interfaces", "XmppApplication.Interfaces\XmppApplication.Interfaces.csproj", "{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmppApplication.Base", "XmppApplication.Base\XmppApplication.Base.csproj", "{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug 2.0|Any CPU = Debug 2.0|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		Release 2.0|Any CPU = Release 2.0|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{037A139A-E595-4341-8AEC-F389CFB2B592}.Debug 2.0|Any CPU.ActiveCfg = Debug|Any CPU
+		{037A139A-E595-4341-8AEC-F389CFB2B592}.Debug 2.0|Any CPU.Build.0 = Debug|Any CPU
+		{037A139A-E595-4341-8AEC-F389CFB2B592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{037A139A-E595-4341-8AEC-F389CFB2B592}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{037A139A-E595-4341-8AEC-F389CFB2B592}.Release 2.0|Any CPU.ActiveCfg = Release|Any CPU
+		{037A139A-E595-4341-8AEC-F389CFB2B592}.Release 2.0|Any CPU.Build.0 = Release|Any CPU
+		{037A139A-E595-4341-8AEC-F389CFB2B592}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{037A139A-E595-4341-8AEC-F389CFB2B592}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D059CE9-2358-4C42-AC38-F5AFDF09485C}.Debug 2.0|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D059CE9-2358-4C42-AC38-F5AFDF09485C}.Debug 2.0|Any CPU.Build.0 = Debug|Any CPU
+		{2D059CE9-2358-4C42-AC38-F5AFDF09485C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D059CE9-2358-4C42-AC38-F5AFDF09485C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D059CE9-2358-4C42-AC38-F5AFDF09485C}.Release 2.0|Any CPU.ActiveCfg = Release|Any CPU
+		{2D059CE9-2358-4C42-AC38-F5AFDF09485C}.Release 2.0|Any CPU.Build.0 = Release|Any CPU
+		{2D059CE9-2358-4C42-AC38-F5AFDF09485C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D059CE9-2358-4C42-AC38-F5AFDF09485C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}.Debug 2.0|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}.Debug 2.0|Any CPU.Build.0 = Debug|Any CPU
+		{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}.Release 2.0|Any CPU.ActiveCfg = Release|Any CPU
+		{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}.Release 2.0|Any CPU.Build.0 = Release|Any CPU
+		{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}.Debug 2.0|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}.Debug 2.0|Any CPU.Build.0 = Debug|Any CPU
+		{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}.Release 2.0|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}.Release 2.0|Any CPU.Build.0 = Release|Any CPU
+		{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

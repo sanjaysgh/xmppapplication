@@ -1,0 +1,147 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D059CE9-2358-4C42-AC38-F5AFDF09485C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XmppApplication.GuiControls</RootNamespace>
+    <AssemblyName>XmppApplication.GuiControls</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="jabber-net, Version=2.0.0.553, Culture=neutral, PublicKeyToken=924c5b18328d6f09, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\jabber-net\bin5\Debug\jabber-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContactList\ContactItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContactList\ContactItem.Designer.cs">
+      <DependentUpon>ContactItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactList\ContactItemStyle.cs" />
+    <Compile Include="ContactList\ContactList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ContactList\GroupHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContactList\GroupHeader.Designer.cs">
+      <DependentUpon>GroupHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactList\GroupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ContactList\GroupPanel.Designer.cs">
+      <DependentUpon>GroupPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebugWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DebugWindow.Designer.cs">
+      <DependentUpon>DebugWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MessageWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageWindow.Designer.cs">
+      <DependentUpon>MessageWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaintFunctions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatusPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StatusPanel.Designer.cs">
+      <DependentUpon>StatusPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatusChooser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StatusChooser.Designer.cs">
+      <DependentUpon>StatusChooser.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ContactList\ContactItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ContactItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactList\GroupHeader.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GroupHeader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ContactList\GroupPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>GroupPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DebugWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DebugWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MessageWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusPanel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StatusPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StatusChooser.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StatusChooser.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\XmppApplication.Base\XmppApplication.Base.csproj">
+      <Project>{BCEBC654-BD6F-4963-B61B-BD6C23BB4A52}</Project>
+      <Name>XmppApplication.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XmppApplication.Interfaces\XmppApplication.Interfaces.csproj">
+      <Project>{32F6A59F-48E1-43BB-9C7C-04F5C8CE0054}</Project>
+      <Name>XmppApplication.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
