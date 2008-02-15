@@ -61,14 +61,12 @@ namespace XmppApplication.Base
 		#region Private Methods
 		void InternalClient_OnReadText (object sender, string txt)
 		{
-			Console.WriteLine ("IN:  {0}", txt);
 			if (debug_form != null)
 				debug_form.LogString (true, txt);
 		}
 
 		void InternalClient_OnWriteText (object sender, string txt)
 		{
-			Console.WriteLine ("OUT: {0}", txt);
 			if (txt.Trim ().Length > 0)
 				if (debug_form != null)
 					debug_form.LogString (false, txt);
