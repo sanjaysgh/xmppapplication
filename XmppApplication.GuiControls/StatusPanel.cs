@@ -36,7 +36,7 @@ namespace XmppApplication.GuiControls
 	{
 		private Pen bezel_pen = Pens.Goldenrod;
 		private Color close_button_default_back_color = Color.Transparent;
-		private Color close_button_hover_back_color = Color.LightGoldenrodYellow;
+		private Color close_button_hover_back_color = Color.Goldenrod;
 		
 		private bool draw_bezel = true;
 		
