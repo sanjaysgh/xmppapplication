@@ -30,6 +30,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Security.Cryptography;
 
 namespace XmppApplication.Base
 {
@@ -84,6 +85,25 @@ namespace XmppApplication.Base
 				}
 				
 			return return_image;
+		}
+
+		public static string HashImage (Image image)
+		{
+			MemoryStream ms = new MemoryStream ();
+			image.Save (ms, ImageFormat.Png);
+
+			SHA1 sha = SHA1Managed.Create ();
+			byte[] b = sha.ComputeHash (ms.GetBuffer ());
+			
+			return Convert.ToString (b);
+		}
+
+		public static string ImageToBase64 (Image image)
+		{
+			MemoryStream ms = new MemoryStream ();
+			image.Save (ms, ImageFormat.Png);
+			
+			return Convert.ToBase64String (ms.GetBuffer ());
 		}
 
 		public static Image OverlayImage (Image baseImage, Image overlay)
