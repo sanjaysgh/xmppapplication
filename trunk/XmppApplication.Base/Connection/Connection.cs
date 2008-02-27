@@ -35,6 +35,7 @@ namespace XmppApplication.Base
 {
 	public class Connection : Component
 	{
+		private bool connected;
 		private bool explicit_connect = true;
 		
 		#region Constructor
@@ -52,6 +53,10 @@ namespace XmppApplication.Base
 		#endregion
 
 		#region Public Properties
+		public bool IsConnected {
+			get { return connected; }
+		}
+		
 		public EncryptionMode Encryption
 		{
 			get
@@ -94,6 +99,10 @@ namespace XmppApplication.Base
 			get { return XmppGlobal.InternalClient.Document; }
 		}
 
+		public jabber.JID Jid {
+			get { return XmppGlobal.InternalClient.JID; }
+		}
+		
 		public string NetworkHost
 		{
 			get { return XmppGlobal.InternalClient.NetworkHost; }
@@ -234,11 +243,13 @@ namespace XmppApplication.Base
 
 		private void InternalClient_OnConnect (object sender, jabber.connection.StanzaStream stream)
 		{
+			connected = true;
 			OnConnect (EventArgs.Empty);
 		}
 
 		private void InternalClient_OnDisconnect (object sender)
 		{
+			connected = false;
 			OnDisconnect (EventArgs.Empty);
 			XmppGlobal.Roster.Clear ();
 		}
